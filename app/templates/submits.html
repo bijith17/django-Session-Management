@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>third name</h1>
+    <form  method="post">
+        {% csrf_token %}
+        <input type="text" name="thirdname" placeholder="enter thirdname" id=""> <br> <br>
+        <input type="submit" value="register" name="" id="">
+        
+        {% if messages %}
+    <div>
+        {% for message in messages %}
+            <h1 style="color: red;">{{ message }}</h1>
+        {% endfor %}
+    </div>
+        {% endif %}
+
+    </form>
+</body>
+</html>
